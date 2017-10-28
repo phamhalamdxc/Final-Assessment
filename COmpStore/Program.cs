@@ -14,12 +14,38 @@ namespace COmpStore
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHost().Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHost BuildWebHost()
+        {
+            return new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .ConfigureAppConfiguration((builderContext, config) =>
+                {
+                    IHostingEnvironment env = builderContext.HostingEnvironment;
+
+                    config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+                })
+                .UseIISIntegration()
+                .UseDefaultServiceProvider((context, options) =>
+                {
+                    options.ValidateScopes = context.HostingEnvironment.IsDevelopment();
+                })
                 .UseStartup<Startup>()
                 .Build();
+        }
+
+        //public static void Main(string[] args)
+        //{
+        //    BuildWebHost(args).Run();
+        //}
+
+        //public static IWebHost BuildWebHost(string[] args) =>
+        //    WebHost.CreateDefaultBuilder(args)
+        //        .UseStartup<Startup>()
+        //        .Build();
     }
 }

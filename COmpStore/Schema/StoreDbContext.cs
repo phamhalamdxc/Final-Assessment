@@ -1,11 +1,14 @@
 ﻿using COmpStore.Schema.Configuration;
 using COmpStore.Schema.Entities;
+using COmpStore.Schema.IdentityEntities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 
 namespace COmpStore.Schema
 {
-    public class StoreDbContext : DbContext
+    public class StoreDbContext : IdentityDbContext<User>
     {
         public StoreDbContext(DbContextOptions options) : base(options)
         { }

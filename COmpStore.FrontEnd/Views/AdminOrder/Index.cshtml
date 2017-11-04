@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Loại sản phẩm</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                @*<div class="form-group">
+                        <a id="btn_delete" class="btn btn-danger btn-sm disabled">Xóa</a>
+                        <a id="btn_uncheck" class="btn btn-default btn-sm pull-right" style="display:none">Bỏ chọn</a>
+                    </div>*@
+                <div class="table-responsive">
+                    <table id="content_table" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Tên người đặt</th>
+                                <th>Ngày đặt</th>
+                                <th>SLSP</th>
+                                <th>Tình trạng</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i=0;i<5;i++)
+                            {
+                                string classColor = "";
+
+                                <tr data-id="@i" style="background: @classColor">
+                                    <td>@i</td>
+                                    <td>Customer Name</td>
+                                    <td>10/11/2012</td>
+                                    <td>1</td>
+                                    <td class="text-center">
+                                        @switch (COmpStore.FrontEnd.OrderStatus.NotProcessYet)
+                                        {
+                                            case COmpStore.FrontEnd.OrderStatus.NotProcessYet:
+                                                //classColor = "#87CEFA";
+                                                <span class="label label-danger"> Chưa xử lí</span>
+                                                break;
+                                            case COmpStore.FrontEnd.OrderStatus.Processing:
+                                                //classColor = "rgba(255, 255, 128, .5)";
+                                                <span class="label label-warning">Đang xử lí</span>
+                                                break;
+                                            case COmpStore.FrontEnd.OrderStatus.Processed:
+                                                //classColor = "#90EE90";
+                                                <span class="label label-success">Đã hoàn tất</span>
+                                                break;
+                                            case COmpStore.FrontEnd.OrderStatus.Denied:
+                                                //classColor = "#FA8072";
+                                                <span class="label label-default">Đã hủy</span>
+                                                break;
+
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        <a asp-action="Details" asp-controller="AdminOrder" asp-route-orderId="1" class="text-primary" title="Chi tiết">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+@section Scripts{
+    <script src="~/js/admin_order_index.js"></script>
+}

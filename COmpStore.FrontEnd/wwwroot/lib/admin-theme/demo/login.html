@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPM Admin Theme</title>
+
+  <link rel="stylesheet" href="includes/css/dist/main.min.css" />
+  <link rel="stylesheet" href="includes/css/dataTables.min.css" /><!-- not available as sass -->
+  <link rel="stylesheet" href="includes/vendor/foundation-icon-fonts/foundation-icons.css" /><!-- paths do not resolve properly in sass -->
+
+  <script src="includes/vendor/modernizr/modernizr.js"></script>
+
+</head>
+  <body>
+
+  <header id="masthead">
+    <!-- Keeps navigation centered with grid. remove if you want full width of banner -->
+    <div class="contain-to-grid">
+      <!-- / Main navigation -->
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#"><img src="includes/img/logo-template-24x180.png" alt="NPM Digital" /></a></h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="left-divider right-divider"><a href="#" title="alerts"><i class="fi-megaphone no-words"></i></a></li>
+            <li class="has-dropdown">
+              <a href="#"><i class="fi-torso"></i> My profile</a>
+              <ul class="dropdown">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Workspaces</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fi-power"></i> Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li class="has-dropdown left-divider right-divider">
+              <a href="#"><i class="fi-monitor"></i> Templates</a>
+              <ul class="dropdown">
+	            <li class="left-divider right-divider"><a href="kitchen-sink.html"><i class="fi-wrench"></i> Kitchen Sink</a></li>
+	            <li class="left-divider right-divider"><a href="bbgrid.html"><i class="fi-list-thumbnails"></i> bbGrid</a></li>
+	            <li class="left-divider right-divider"><a href="side-menu.html"><i class="fi-layout"></i> side nav</a></li>
+	            <li class="left-divider right-divider"><a href="login.html"><i class="fi-lock"></i> Login</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div><!-- / .contain-to-grid -->
+
+  </header><!-- / #masthead -->
+
+	<div class="section">	
+	  <div class="row">
+		  <div class="medium-6 medium-centered columns">
+			  
+			  <div class="panel login">
+				  
+					<form id="example-login">
+					  
+						<div class="row collapse">
+							<div class="small-1 columns">
+								<span class="prefix"><i class="fi-mail"></i></span>
+							</div><!--/ small-1 -->
+							<div class="small-11 columns">
+								<input type="email" placeholder="Email Address">
+							</div><!--/ small-11 -->
+						</div><!-- /row -->
+						  
+						<div class="row collapse prefix-radius">
+							<div class="small-1 columns">
+								<span class="prefix"><i class="fi-lock"></i></span>
+							</div><!--/ small-1 -->
+							<div class="small-11 columns">
+								<input type="password" placeholder="Password">
+							</div><!--/ small-11 -->
+						</div><!-- /row -->
+					  
+					  
+					  <div class="row">
+						  <div class="medium-12 columns">	
+						  	<input type="submit" class="button success expand" />
+						  </div><!--/ medium-6-->
+					  </div><!--/ row -->
+					  				  
+				  </form>
+				  
+			  </div><!--/ panel -->
+			  
+			  <div class="row">
+				  <div class="medium-12 columns text-center">
+					  <a class="grey" href="#">Forgot my password</a>
+				  </div><!--/ medium-12 -->
+			  </div><!--/ row -->		  
+			  
+		  </div><!--/ medium-6 centered -->
+	  </div><!-- /row -->
+	  
+	</div><!--/section -->
+
+  <footer id="mainfoot">
+    <a class="credit" href="http://northpointministries.org">©2015 North Point Ministries Digital team</a>
+  </footer>
+
+  <script src="includes/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="includes/vendor/foundation/js/foundation.min.js"></script>
+
+  <!-- responsive tables -->
+  <script type="text/javascript" src="includes/vendor/responsive-tables/responsive-tables.js"></script>
+
+
+  <!-- Datatables js -->
+  <script type="text/javascript" src="includes/vendor/DataTables/media/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="includes/js/vendor/dataTables.foundation.js"></script>
+
+  <script>
+      $(document).foundation();
+ 
+       $('.toggle-link').click(function () {
+          $('.toggle').animate({
+              width: 'toggle'
+          });
+      });     
+      
+  </script>
+
+  </body>
+</html>

@@ -2,11 +2,12 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Cors;
 
 namespace COmpStore.Controllers
 {
-    [Route("api/[controller]")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [EnableCors("AllowCors"), Route("api/[controller]")]
+    [Authorize]
     public class ValuesController : Controller
     {
         // GET api/values

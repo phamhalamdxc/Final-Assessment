@@ -5,6 +5,15 @@
     "bootstrap": "3.3.7",
     "jquery": "2.2.0",
     "jquery-validation": "1.14.0",
-    "jquery-validation-unobtrusive": "3.2.6"
+    "jquery-validation-unobtrusive": "3.2.6",
+    "admin-theme": "1.0.1",
+    "bootstrap-multiselect": "v0.9.13",
+    "cropit": "v0.5.1",
+    "bootstrap-datetimepicker": "v0.0.11",
+    "bootbox.js": "bootbox#v4.4.0"
+  },
+  "resolutions": {
+    "bootstrap": ">= 2.3.2",
+    "jquery": ">=1.2"
   }
 }

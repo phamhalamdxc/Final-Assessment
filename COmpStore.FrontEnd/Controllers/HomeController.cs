@@ -12,19 +12,6 @@ namespace COmpStore.FrontEnd.Controllers
 {
     public class HomeController : Controller
     {
-        private static async Task<List<CategoryModel>> GetList()
-        {
-            var requestUri = $"http://localhost:2694/category";
-            var bearerToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtcnRlYUBnbWFpbC5jb20iLCJqdGkiOiJmNTgyZjVlOS1hZTVhLTQyNGYtOTY5MC0xMmRiZmFkZTc0ZjciLCJlbWFpbCI6Im1ydGVhQGdtYWlsLmNvbSIsImV4cCI6MTUwOTQ1MDUyOSwiaXNzIjoiRGVtb0lzc3VlciIsImF1ZCI6IkRlbW9BdWRpZW5jZSJ9.j6p0P_p35FDHK9GKm8L9LPf7fQ9vQ6Is8T21Rhy99kI";
-            var response = await HttpRequestFactory.Get(requestUri, bearerToken);
-
-            Console.WriteLine($"Status: {response.StatusCode}");
-            var outputModel = response.ContentAsType<List<CategoryModel>>();
-            //outputModel.ForEach(item =>
-            //                Console.WriteLine("{0} - {1}", item.Id, item.CategoryName));
-
-            return outputModel;
-        }
 
         public async Task<IActionResult> Index()
         {

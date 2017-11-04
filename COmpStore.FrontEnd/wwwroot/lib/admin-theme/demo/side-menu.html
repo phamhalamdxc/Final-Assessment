@@ -1,0 +1,234 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPM Admin Theme</title>
+
+  <link rel="stylesheet" href="includes/css/dist/main.min.css" />
+  <link rel="stylesheet" href="includes/css/dataTables.min.css" /><!-- not available as sass -->
+  <link rel="stylesheet" href="includes/vendor/foundation-icon-fonts/foundation-icons.css" /><!-- paths do not resolve properly in sass -->
+
+  <script src="includes/vendor/modernizr/modernizr.js"></script>
+
+</head>
+ <body>
+
+  <header id="masthead">
+    <!-- Keeps navigation centered with grid. remove if you want full width of banner -->
+    <div>
+      <!-- / Main navigation -->
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+	      <li class="name">
+            <h1><a href="#"><img src="includes/img/logo-template-24x180.png" alt="NPM Digital" /></a></h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+
+		  <!-- duplicate menu here for mobile view -->
+	      <ul class="mobile-menu show-for-small-only">
+	  		<li class="left-divider right-divider"><a href="kitchen-sink.html"><i class="fi-wrench"></i> Kitchen Sink</a></li>
+            <li class="left-divider right-divider"><a href="bbgrid.html"><i class="fi-list-thumbnails"></i> bbGrid</a></li>
+            <li class="left-divider right-divider"><a href="side-menu.html"><i class="fi-layout"></i> side nav</a></li>
+            <li class="left-divider right-divider"><a href="login.html"><i class="fi-lock"></i> Login</a></li>
+
+			<li class="has-dropdown" role="menuitem"><a href="#"><i class="fi-page"></i> Entries</a>
+				<ul class="dropdown">
+					<li><a href="#"><i class="fi-plus"></i> add new</a></li>
+					<li><a href="#"><i class="fi-pencil"></i> edit entries</a></li>
+				</ul>
+			</li>
+			<li class="divider"></li>
+	      </ul>
+
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="has-dropdown">
+              <a href="#"><i class="fi-torso"></i> My profile</a>
+              <ul class="dropdown">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Workspaces</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fi-power"></i> Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          </section>
+      </nav>
+    </div><!-- / .contain-to-grid -->
+
+  </header><!-- / #masthead -->
+
+  	<aside id="nav-container" class="visible-for-medium-up">
+		<ul class="side-nav" role="navigation" title="Link List">
+			<li class="name"><h1><a href="#"><img src="includes/img/logo-template-24x180.png" alt="NPM Digital" /></a></h1></li>
+			<li class="left-divider right-divider"><a href="kitchen-sink.html"><i class="fi-wrench"></i> Kitchen Sink</a></li>
+	        <li class="left-divider right-divider"><a href="bbgrid.html"><i class="fi-list-thumbnails"></i> bbGrid</a></li>
+	        <li class="left-divider right-divider"><a href="side-menu.html"><i class="fi-layout"></i> side nav</a></li>
+	        <li class="left-divider right-divider"><a href="login.html"><i class="fi-lock"></i> Login</a></li>
+
+			<li><span>Has submenu</span></li>
+			<li class="divider"></li>
+			<li role="menuitem"><a href="#"><i class="fi-page"></i> Entries</a>
+				<ul>
+					<li><a href="#addnew"><i class="fi-plus"></i> add new</a></li>
+					<li><a href="#edit"><i class="fi-pencil"></i> edit entries</a></li>
+				</ul>
+			</li>
+		</ul>
+	</aside>
+
+	<!-- Main content here -->
+	<div id="content">
+		<div class="row">
+			<div class="medium-12 columns">
+                <ul class="breadcrumbs">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li class="unavailable"><a href="#">Gene Splicing</a></li>
+                  <li class="current"><a href="#">Cloning</a></li>
+                </ul>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="medium-12 columns">
+
+				<header>
+					<h1>Child Church Name</h1>
+				</header>
+
+				<div class="panel">
+
+					<div class="row">
+						<div class="medium-12 columns">
+							<header class="clearfix">
+								<h2 class="left">Information</h2>
+								<a class="button small right" href="#">Edit Church Info</a>
+							</header>
+						</div>
+					</div><!--/ row -->
+
+					<div class="row">
+						<div class="medium-6 columns">
+
+							<h4>Location</h4>
+							<hr />
+
+							<div class="row">
+								<div class="medium-12 columns">
+
+									<div class="static-field">
+										<strong>Address</strong>
+										<p>455 Northpoint Drive</p>
+									</div><!--/static field -->
+
+								</div><!-- /medium-12 -->
+							</div><!-- / row -->
+
+							<div class="row">
+								<div class="medium-8 columns">
+
+									<div class="static-field">
+										<strong>City</strong>
+										<p>Alpharetta</p>
+									</div><!--/static field -->
+
+								</div><!-- /medium-8 -->
+
+								<div class="medium-4 columns">
+
+									<div class="static-field">
+										<strong>State</strong>
+										<p>GA</p>
+									</div><!--/static field -->
+
+								</div><!-- /medium-4 -->
+
+							</div><!-- / row -->
+
+							<div class="row">
+								<div class="medium-6 columns">
+
+									<div class="static-field">
+										<strong>Zip Code</strong>
+										<p>30322</p>
+									</div><!--/static field -->
+
+								</div><!-- /medium-6 -->
+
+								<div class="medium-6 columns">
+
+									<div class="static-field">
+										<strong>Country</strong>
+										<p>US</p>
+									</div><!--/static field -->
+
+								</div><!-- /medium-6 -->
+
+							</div><!-- / row -->
+
+						</div><!-- / medium-6 -->
+
+						<div class="medium-3 columns">
+
+							<h4>Additional Info</h4>
+							<hr />
+							<ul class="naked-list">
+								<li class="clearfix"><strong>Website</strong> <br /> <span><a href="#">google.com</a></span></li>
+								<li class="clearfix"><strong>Parent Organization</strong> <br /> <span>North Point Community Church</span></li>
+								<li class="clearfix"><strong>Campaign end date</strong> <br /> <span>12:00pm 12/1/16</span></li>
+							</ul>
+
+						</div><!-- /4 -->
+
+						<div class="medium-3 columns">
+
+							<h4>Campaign Confirmation email</h4>
+							<hr />
+							<ul class="naked-list">
+								<li class="clearfix"><strong>From email</strong> <br /> <span><a href="#">from@table.org</a></span></li>
+								<li class="clearfix"><strong>Email Signature</strong> <br /> <span>The Children of intersect Project Team</span></li>
+							</ul>
+
+						</div><!-- /4 -->
+
+					</div><!-- /row -->
+
+				</div><!--/ panel -->
+
+			</div><!--/ medium-12 -->
+		</div><!-- /row -->
+
+
+	</div><!--/ #content -->
+
+  <footer id="mainfoot">
+    <a class="credit" href="http://northpointministries.org">©2015 North Point Ministries Digital team</a>
+  </footer>
+
+  <script src="includes/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="includes/vendor/foundation/js/foundation.min.js"></script>
+
+  <!-- responsive tables -->
+  <script type="text/javascript" src="includes/vendor/responsive-tables/responsive-tables.js"></script>
+
+
+  <!-- Datatables js -->
+  <script type="text/javascript" src="includes/vendor/DataTables/media/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="includes/js/vendor/dataTables.foundation.js"></script>
+  <script type="text/javascript" src="../src/js/admin-theme.js"></script>
+
+  <script>
+
+      $(document).foundation();
+
+  </script>
+  </body>
+</html>

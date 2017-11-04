@@ -1,0 +1,24 @@
+{
+  "name": "admin-theme-demo",
+  "version": "1.0.0",
+  "homepage": "https://github.com/npmweb/admin-theme",
+  "authors": [
+    "Jared Erickson <c-jarederickson@northpoint.org>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "foundation": "5.5.1",
+    "jquery": "2.1.1",
+    "DataTables": "1.10.4",
+    "responsive-tables": "*",
+    "foundation-icon-fonts": "*",
+    "bbGrid": "git@github.com:npmweb/bbgrid#ddb3eaac7088adcb16e48d53340f8088519c71d6"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

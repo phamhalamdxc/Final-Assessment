@@ -1,0 +1,270 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPM Admin Theme</title>
+
+  <link rel="stylesheet" href="includes/css/dist/main.min.css" />
+  <link rel="stylesheet" href="includes/css/dataTables.min.css" /><!-- not available as sass -->
+  <link rel="stylesheet" href="includes/vendor/foundation-icon-fonts/foundation-icons.css" /><!-- paths do not resolve properly in sass -->
+
+  <script src="includes/vendor/modernizr/modernizr.js"></script>
+
+</head>
+  <body>
+
+  <header id="masthead">
+    <!-- Keeps navigation centered with grid. remove if you want full width of banner -->
+    <div class="contain-to-grid">
+      <!-- / Main navigation -->
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+          	<h1><a href="#"><img src="includes/img/logo-template-24x180.png" alt="NPM Digital" /></a></h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="left-divider right-divider"><a href="#" title="alerts"><i class="fi-megaphone no-words"></i></a></li>
+            <li class="has-dropdown">
+              <a href="#"><i class="fi-torso"></i> My profile</a>
+              <ul class="dropdown">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Workspaces</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fi-power"></i> Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li class="has-dropdown left-divider">
+              <a href="#"><i class="fi-monitor"></i> Dashboard</a>
+              <ul class="dropdown">
+                <li class="active"><a href="#"><i class="fi-mountains"></i> Item</a></li>
+                <li><a href="#"><i class="fi-compass"></i> Item</a></li>
+              </ul>
+            </li>
+            <li class="left-divider right-divider"><a href="kitchen-sink.html"><i class="fi-wrench"></i> Kitchen Sink</a></li>
+            <li class="left-divider right-divider"><a href="bbgrid.html"><i class="fi-list-thumbnails"></i> bbGrid</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div><!-- / .contain-to-grid -->
+
+  </header><!-- / #masthead -->
+
+  <div class="row">
+    <div class="medium-12 columns">
+      <div class="action-panel">
+       
+        <header class="clearfix">
+          <h2 class="left">
+            People
+          </h2>
+          <a href="#" class="button right" data-reveal-id="bbModal">Create a New User</a>
+        </header>
+        
+        <div id="bbModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	      	<h2>Create New User</h2>
+	      	<hr />
+	      	
+					<div class="row">
+					  <div class="small-12 small-centered columns">
+					      <form>
+					        <div class="row">
+					          <div class="large-1 columns">
+					            <label>Prefix
+					              <select>
+					                <option value="husker">Mr</option>
+					                <option value="starbuck">Ms</option>
+					                <option value="hotdog">Mrs</option>
+					                <option value="apollo">Master</option>
+					              </select>
+					            </label>
+					          </div>						        
+					          <div class="large-5 columns">
+					            <label>First Name
+					              <input type="text" placeholder="First name" />
+					            </label>
+					          </div>
+					          <div class="large-6 columns">
+					            <label>Last Name
+					              <input type="text" placeholder="Last Name" />
+					            </label>
+					          </div>
+					        </div><!--/row -->
+					        <div class="row">		
+					          <div class="large-6 columns">
+					            <label>Grantee
+					              <input type="text" placeholder="Sir. Church of the third Gospel of John" />
+					            </label>
+					          </div>			        
+					          <div class="large-6 columns">
+					            <label>Email
+					              <input type="email" placeholder="jon777@aol.com" />
+					            </label>
+					          </div>
+					        </div><!--/row -->	
+					        <div class="row">
+					          <div class="large-12 columns">
+					            <label>Notes (optional)
+					              <textarea placeholder=""></textarea>
+					            </label>
+					          </div>
+					        </div><!--/ row -->					        				        
+					        <div class="row">
+					          <div class="large-12 columns">
+						          <div class="alert-box secondary">
+					            <label>User is:</label>
+					            <input type="radio" name="active" value="Red" id="inactive"><label for="inactive">inactive</label>
+					            <input type="radio" name="active" value="Blue" id="active" checked><label for="active">active</label>
+						          </div>
+					          </div>
+					        </div>
+					        <div class="row">
+						        <div class="large-12 columns">
+							        <a class="button right success" href="#">Create new user</a>
+						        </div>
+					        </div>
+					      </form>
+					  </div>
+					</div>
+	      <a class="close-reveal-modal" aria-label="Close"><i class="fi-x no-words"></i></a>
+        </div><!-- / #bbModal -->
+
+        <div class="content">
+        	
+        	<div id="bbGridSample"></div>
+        
+        </div><!--content -->
+        
+        <footer class="clearfix">
+	        <span class="left">You have <strong>108</strong> archived people</span>
+	        <a class="button secondary tiny right" href="#">View Archived users</a>
+        </footer>
+        
+      </div><!-- / .action-panel -->
+    </div><!--/ medium-12 -->
+  </div><!--/ row -->
+
+  <footer id="mainfoot">
+    <a class="credit" href="http://northpointministries.org">©2015 North Point Ministries Digital team</a>
+  </footer>
+
+  <script src="includes/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="includes/vendor/foundation/js/foundation.min.js"></script>
+
+  <!-- bbGrid js -->
+  <script type="text/javascript" src="includes/vendor/underscore/underscore-min.js"></script>
+  <script type="text/javascript" src="includes/vendor/backbone/backbone.js"></script>
+  <script type="text/javascript" src="includes/vendor/bbGrid/bbGrid.min.js"></script>
+  
+  <!-- resonsive table -->
+   
+  <script type="text/javascript" src="includes/vendor/responsive-tables/responsive-tables.js"></script>
+
+  <script>
+      $(document).foundation();
+  </script>
+  <script>
+    $(document).ready(function(){
+var app = app || {};
+
+app.Person = Backbone.Model.extend({});
+
+app.PersonCollection = Backbone.Collection.extend({
+  model: app.Person,
+  initialize: function( models ) {
+    this.parse({})
+  },
+});
+
+app.people = [
+  {
+    name: 'Ahmed Sanford',
+    email: 'jon@gmail.com',
+    grantee: 'Catholic Charities WV',
+    status: 'Active'
+  },
+  {
+    name: 'Tomas Budawap',
+    email: 'tmas@gmail.com',
+    grantee: 'Freedom Place',
+    status: 'Inactive'
+  },
+  {
+    name: 'Captian Planet',
+    email: 'sludgebuster@gmail.com',
+    grantee: 'The Powers Combined NW',
+    status: 'Active'
+  },
+  {
+    name: 'Spider Man',
+    email: 'sixlegs@webber.com',
+    grantee: 'NYC',
+    status: 'Active'
+  },
+  
+  {
+    name: 'Audrey Hansen',
+    email: 'cali@gmail.com',
+    grantee: 'RESA 1',
+    status: 'Inactive'
+  }
+];
+app.personCollection = new app.PersonCollection(app.people);
+app.bbGridSampleTable = new bbGrid.View({
+    css: 'foundation',
+    tableClass: 'responsive naked',
+    container: $('#bbGridSample'),
+    collection: app.personCollection,
+    minimalHeader: true,
+    colModel: [
+        {
+            property: 'name',
+            label: 'Name',
+            sortOrder: 'asc'
+        },
+        {
+            property: 'email',
+            label: 'E-mail'
+        },
+        {
+            property: 'grantee',
+            label: 'Grantee'
+        },
+        {
+            property: 'status',
+            label: 'Status',
+            render: function(model, view) {
+              return model.get('status');
+            }
+        },
+        {
+            label: 'Actions',
+            sortable: false,
+						width: 80,
+            render: function(model, view) {
+              return '<a href="#" class="button radius success tiny"><i class="fi-magnifying-glass" data-original-title="View" title="View"> </i> </a>'
+                + ' <a href="#" class="button radius success tiny"><i class="fi-eye" data-original-title="Quick View" title="Quick View"> </i> </a>'
+                + ' <a href="#" class="button radius success tiny"><i class="fi-pencil" data-original-title="Edit" title="Edit"> </i> </a>'
+                + ' <a href="#" class="button radius alert tiny"><i class="fi-archive" data-original-title="Archive" title="Archive"> </i> </a>'
+                + ' <a href="#" class="button radius alert tiny"><i class="fi-trash" data-original-title="Delete" title="Delete"> </i></a>';
+            }
+        }
+    ],
+    events: {}
+});
+
+    });
+  </script>
+
+  </body>
+</html>

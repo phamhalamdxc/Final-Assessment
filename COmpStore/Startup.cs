@@ -18,6 +18,8 @@ using Serilog;
 using System.IO;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
 
 namespace COmpStore
 {
@@ -27,7 +29,7 @@ namespace COmpStore
 
         private void ConfigureAuth(IServiceCollection services)
         {
-            
+
         }
 
         public IConfiguration Configuration { get; }
@@ -78,10 +80,7 @@ namespace COmpStore
                 .AddEntityFrameworkStores<StoreDbContext>()
                 .AddDefaultTokenProviders();
 
-            // Add framework services.
-            services.AddMvc();
-
-            // Config authenticate service
+            //Config authenticate service
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -95,14 +94,30 @@ namespace COmpStore
             //        _tokenValidationParameters);
             //});
 
-            // CORS
-            services.AddCors(options =>
-            {
-                options.AddPolicy("CorsPolicy", builder =>
-                {
-                    builder.WithOrigins("http://localhost:60268");
-                });
-            });
+           
+
+            services.AddCors(
+               options => options.AddPolicy("AllowCors",
+               builder =>
+               {
+                   builder
+                   .WithOrigins("http://localhost:4456") //AllowSpecificOrigins;
+                                                         //.WithOrigins("http://localhost:4456", "http://localhost:4457") //AllowMultipleOrigins;
+                                                         //.AllowAnyOrigin() //AllowAllOrigins;
+
+                   //.WithMethods("GET") //AllowSpecificMethods;
+                   //.WithMethods("GET", "PUT") //AllowSpecificMethods;
+                   //.WithMethods("GET", "PUT", "POST") //AllowSpecificMethods;
+                   .WithMethods("GET", "PUT", "POST", "DELETE") //AllowSpecificMethods;
+                                                                //.AllowAnyMethod() //AllowAllMethods;
+
+                   //.WithHeaders("Accept", "Content-type", "Origin", "X-Custom-Header");  //AllowSpecificHeaders;
+                   .AllowAnyHeader(); //AllowAllHeaders;
+                })
+           );
+
+            // Add framework services.
+            services.AddMvc();
 
             // Add transient
             services.AddTransient<ICategoryService, CategoryService>();
@@ -155,15 +170,11 @@ namespace COmpStore
             loggerFactory.AddDebug();
             loggerFactory.AddSerilog();
 
-            // Shows UseCors with CorsPolicyBuilder.
-            app.UseCors(builder =>
-               builder.WithOrigins("http://localhost:60268"));
-
+            //Enable CORS policy "AllowCors"
+            app.UseCors("AllowCors");
             app.UseAuthentication();
             app.UseStaticFiles();
-
             app.UseMvc();
-
             SampleData.InitializeMusicStoreDatabaseAsync(app.ApplicationServices).Wait();
         }
     }

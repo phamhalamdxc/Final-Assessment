@@ -1,0 +1,78 @@
+2017-10-31 23:49:13.480 +07:00 [Information] Entity Framework Core "2.0.0-rtm-26452" initialized '"StoreDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2017-10-31 23:49:14.551 +07:00 [Information] Executed DbCommand ("489"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0"
+2017-10-31 23:49:15.286 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:2693/  
+2017-10-31 23:49:15.285 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:2693/api/category  
+2017-10-31 23:49:15.570 +07:00 [Information] Request finished in 361.1553ms 404 
+2017-10-31 23:49:15.655 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:2693/robots.txt  
+2017-10-31 23:49:15.668 +07:00 [Information] Request finished in 18.1288ms 404 
+2017-10-31 23:49:15.707 +07:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtcnRlYUBnbWFpbC5jb20iLCJqdGkiOiIzOWI0ZmRjMS04NTVkLTQzNjItYmI1MS04ODMyZWI2NDRmNGUiLCJlbWFpbCI6Im1ydGVhQGdtYWlsLmNvbSIsImV4cCI6MTUwOTQ2NTM3MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo2MDI2OCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NjAyNjgifQ.yP2vdE8iRw4TkOGfDHMbYtB0IGigefGfXfAKQosLuEE".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '10/31/2017 15:56:10'
+Current time: '10/31/2017 16:49:15'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2017-10-31 23:49:15.716 +07:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '10/31/2017 15:56:10'
+Current time: '10/31/2017 16:49:15'."
+2017-10-31 23:49:15.984 +07:00 [Information] Executing action method "COmpStore.Controllers.CategoryController.Get (COmpStore)" with arguments (null) - ModelState is Valid
+2017-10-31 23:49:16.107 +07:00 [Information] Entity Framework Core "2.0.0-rtm-26452" initialized '"StoreDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2017-10-31 23:49:16.423 +07:00 [Information] Executed DbCommand ("122"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CategoryName]
+FROM [Categories] AS [c]"
+2017-10-31 23:49:16.526 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-10-31 23:49:16.590 +07:00 [Information] Executed action "COmpStore.Controllers.CategoryController.Get (COmpStore)" in 637.4905ms
+2017-10-31 23:49:16.604 +07:00 [Information] Request finished in 1398.9309ms 200 application/json; charset=utf-8
+2017-10-31 23:52:44.624 +07:00 [Information] Entity Framework Core "2.0.0-rtm-26452" initialized '"StoreDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2017-10-31 23:52:44.843 +07:00 [Information] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0"
+2017-10-31 23:52:45.103 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:2693/api/category  
+2017-10-31 23:52:45.187 +07:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtcnRlYUBnbWFpbC5jb20iLCJqdGkiOiIzOWI0ZmRjMS04NTVkLTQzNjItYmI1MS04ODMyZWI2NDRmNGUiLCJlbWFpbCI6Im1ydGVhQGdtYWlsLmNvbSIsImV4cCI6MTUwOTQ2NTM3MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo2MDI2OCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NjAyNjgifQ.yP2vdE8iRw4TkOGfDHMbYtB0IGigefGfXfAKQosLuEE".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '10/31/2017 15:56:10'
+Current time: '10/31/2017 16:52:45'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2017-10-31 23:52:45.188 +07:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '10/31/2017 15:56:10'
+Current time: '10/31/2017 16:52:45'."
+2017-10-31 23:52:45.289 +07:00 [Information] Executing action method "COmpStore.Controllers.CategoryController.Get (COmpStore)" with arguments (null) - ModelState is Valid
+2017-10-31 23:52:45.336 +07:00 [Information] Entity Framework Core "2.0.0-rtm-26452" initialized '"StoreDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2017-10-31 23:52:45.451 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CategoryName]
+FROM [Categories] AS [c]"
+2017-10-31 23:52:45.496 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-10-31 23:52:45.515 +07:00 [Information] Executed action "COmpStore.Controllers.CategoryController.Get (COmpStore)" in 233.8744ms
+2017-10-31 23:52:45.516 +07:00 [Information] Request finished in 424.5639ms 200 application/json; charset=utf-8
+2017-10-31 23:57:29.069 +07:00 [Information] Entity Framework Core "2.0.0-rtm-26452" initialized '"StoreDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2017-10-31 23:57:29.228 +07:00 [Information] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0"
+2017-10-31 23:57:29.434 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:2693/  
+2017-10-31 23:57:29.434 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:2693/api/category  
+2017-10-31 23:57:29.505 +07:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtcnRlYUBnbWFpbC5jb20iLCJqdGkiOiIzOWI0ZmRjMS04NTVkLTQzNjItYmI1MS04ODMyZWI2NDRmNGUiLCJlbWFpbCI6Im1ydGVhQGdtYWlsLmNvbSIsImV4cCI6MTUwOTQ2NTM3MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo2MDI2OCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NjAyNjgifQ.yP2vdE8iRw4TkOGfDHMbYtB0IGigefGfXfAKQosLuEE".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '10/31/2017 15:56:10'
+Current time: '10/31/2017 16:57:29'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2017-10-31 23:57:29.506 +07:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '10/31/2017 15:56:10'
+Current time: '10/31/2017 16:57:29'."
+2017-10-31 23:57:29.536 +07:00 [Information] Request finished in 113.9905ms 404 
+2017-10-31 23:57:29.623 +07:00 [Information] Executing action method "COmpStore.Controllers.CategoryController.Get (COmpStore)" with arguments (null) - ModelState is Valid
+2017-10-31 23:57:29.688 +07:00 [Information] Entity Framework Core "2.0.0-rtm-26452" initialized '"StoreDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2017-10-31 23:57:29.838 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CategoryName]
+FROM [Categories] AS [c]"
+2017-10-31 23:57:29.885 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-10-31 23:57:29.903 +07:00 [Information] Executed action "COmpStore.Controllers.CategoryController.Get (COmpStore)" in 296.2345ms
+2017-10-31 23:57:29.904 +07:00 [Information] Request finished in 482.2662ms 200 application/json; charset=utf-8

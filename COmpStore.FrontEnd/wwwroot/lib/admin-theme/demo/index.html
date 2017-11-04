@@ -1,0 +1,476 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPM Admin Theme</title>
+
+  <link rel="stylesheet" href="includes/css/dist/main.min.css" />
+  <link rel="stylesheet" href="includes/css/dataTables.min.css" /><!-- not available as sass -->
+  <link rel="stylesheet" href="includes/vendor/foundation-icon-fonts/foundation-icons.css" /><!-- paths do not resolve properly in sass -->
+
+  <script src="includes/vendor/modernizr/modernizr.js"></script>
+
+</head>
+  <body>
+
+  <header id="masthead">
+    <!-- Keeps navigation centered with grid. remove if you want full width of banner -->
+    <div class="contain-to-grid">
+      <!-- / Main navigation -->
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#"><img src="includes/img/logo-template-24x180.png" alt="NPM Digital" /></a></h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="left-divider right-divider"><a href="#" title="alerts"><i class="fi-megaphone no-words"></i></a></li>
+            <li class="has-dropdown">
+              <a href="#"><i class="fi-torso"></i> My profile</a>
+              <ul class="dropdown">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Workspaces</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fi-power"></i> Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li class="has-dropdown left-divider right-divider">
+              <a href="#"><i class="fi-monitor"></i> Templates</a>
+              <ul class="dropdown">
+	            <li class="left-divider right-divider"><a href="kitchen-sink.html"><i class="fi-wrench"></i> Kitchen Sink</a></li>
+	            <li class="left-divider right-divider"><a href="bbgrid.html"><i class="fi-list-thumbnails"></i> bbGrid</a></li>
+	            <li class="left-divider right-divider"><a href="side-menu.html"><i class="fi-layout"></i> side nav</a></li>
+	            <li class="left-divider right-divider"><a href="login.html"><i class="fi-lock"></i> Login</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div><!-- / .contain-to-grid -->
+
+  </header><!-- / #masthead -->
+
+  <div class="row">
+    <div class="medium-8 columns">
+
+      <div class="info-panel">
+        <div class="row">
+          <div class="medium-10 small-9 columns">
+            <h3 class="green">Project management schedule</h3>
+          </div><!-- /small-10 -->
+          <div class="medium-2 small-3 columns text-right">
+            <a class="button secondary tiny"><i class="fi-plus no-words"></i></a>
+          </div><!-- / small-10 -->
+        </div><!--/ clearfix -->
+        <ul class="">
+          <li class="clearfix">Feb 1, 2015 <span class="strong">Basecamp Project</span> <a class="right">View</a></li>
+          <li class="clearfix">Feb 14, 2015 <span class="strong">Weekly Meeting</span> <a class="right">View</a></li>
+          <li class="clearfix">Feb 18, 2015 <span class="strong">client overview</span> <a class="right">View</a></li>
+          <li class="clearfix">Feb 24, 2015 <span class="strong">find princess in castle</span> <a class="right">View</a></li>
+          <li class="clearfix">Feb 28, 2015 <span class="strong">Princess is in different castle</span> <a class="right">View</a></li>
+
+        </ul>
+      </div><!--/ panel -->
+
+
+    </div><!--/ .medium-6 columns -->
+
+    <div class="medium-4 columns">
+
+      <div class="info-panel">
+        <h3><i class="fi-flag"></i> Overdue projects</h3>
+        <ul>
+          <li class="clearfix"><span class="strong">1 project</span> <small>Jan, 24</small><a href="#" class="right">view</a></li>
+          <li class="clearfix"><span class="strong">admin theme</span> <small>Jan, 29</small> <a href="#" class="right">view</a></li>
+        </ul>
+        <a class="button secondary expand">View All</a>
+
+      </div><!--/ info-panel -->
+
+      <div class="icon-bar three-up">
+        <a class="item">
+          <i class="fi-pencil"></i>
+          <label>add note</label>
+        </a>
+        <a class="item">
+          <i class="fi-plus"></i>
+          <label>add item</label>
+        </a>
+        <a class="item">
+          <i class="fi-eye"></i>
+          <label>view all</label>
+        </a>
+      </div>
+
+    </div><!--/ .medium-6 -->
+  </div><!-- /.row -->
+
+  <div class="row">
+    <div class="medium-12 columns">
+
+      <ul class="tabs" data-tab>
+        <li class="tab-title active"><a href="#panel1">Signups</a></li>
+        <li class="tab-title"><a href="#panel2">Analytics</a></li>
+        <li class="tab-title"><a href="#panel3">Error</a></li>
+      </ul>
+      <div class="tabs-content">
+        <div class="content active" id="panel1">
+
+        <table class="data-table-column-filter table dataTable responsive"  id="dataTables-example" aria-describedby="DataTables_Table_1_info">
+          <thead>
+            <tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
+                Name
+              : activate to sort column descending">
+                Name
+              </th><th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="
+                E-mail
+              : activate to sort column ascending" >
+                E-mail
+              </th><th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="
+                Grantee
+              : activate to sort column ascending">
+                Grantee
+              </th><th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="
+                Status
+              : activate to sort column ascending">
+                Status
+              </th><th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label=": activate to sort column ascending"></th></tr>
+          </thead>
+
+          <tfoot>
+            <tr>
+              <th rowspan="1" colspan="1">
+                <span class="filter_column filter_text">
+                  <input type="text" class="search_init text_filter" placeholder="Name">
+                </span>
+              </th>
+              <th rowspan="1" colspan="1"><span class="filter_column filter_text"><input type="text" class="search_init text_filter" placeholder="E-mail"></span></th>
+              <th rowspan="1" colspan="1"><span class="filter_column filter_text"><input type="text" class="search_init text_filter" placeholder="Grantee"></span></th>
+              <th colspan="1" rowspan="1"><span class="filter_column filter_text"><input type="text" class="search_init text_filter" placeholder="Status"></span></th>
+              <th colspan="1" rowspan="1"><span class="filter_column filter_text"><a class="button success right radius small" href="#"><i class="fi-plus"></i> add</a</th>
+            </tr>
+          </tfoot>
+          <tbody role="alert" aria-live="polite" aria-relevant="all">
+            <tr>
+              <td class=" sorting_1">Ahmed Sanford</td>
+              <td>jon@gmail.com</td>
+              <td>Catholic Charities WV</td>
+              <td>
+                <span class="label label-success">Active</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Audrey Hansen</td>
+              <td>cali@gmail.com</td>
+              <td>RESA 1</td>
+              <td>
+                <span class="label label-danger">Inactive</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">August Rice</td>
+              <td>austyn@yahoo.com</td>
+              <td>Boone County Schools</td>
+              <td>
+                <span class="label label-success">Active</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Brionna Oberbrunner</td>
+              <td>hoyt@gmail.com</td>
+              <td>North Central Regional Jail</td>
+              <td>
+                <span class="label label-success">Active</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Clare Harvey</td>
+              <td>marlene@gmail.com</td>
+              <td>Eastern WVCTC</td>
+              <td>
+                <span class="label label-danger">Inactive</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Davion Rowe</td>
+              <td>simone@gmail.com</td>
+              <td>Mason County Schools</td>
+              <td>
+                <span class="label label-danger">Inactive</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Domenick Runte</td>
+              <td>godfrey@hotmail.com</td>
+              <td>Western Regional Jail</td>
+              <td>
+                <span class="label label-success">Active</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Elnora Balistreri</td>
+              <td>desmond@yahoo.com</td>
+              <td>RESA 5</td>
+              <td>
+                <span class="label label-danger">Inactive</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Ericka Heidenreich</td>
+              <td>niko@yahoo.com</td>
+              <td>Ohio County Schools</td>
+              <td>
+                <span class="label label-danger">Inactive</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr><tr>
+              <td class=" sorting_1">Flavie Stracke</td>
+              <td>verna@gmail.com</td>
+              <td>Potomac Highlands Regional Jail</td>
+              <td>
+                <span class="label label-danger">Inactive</span>
+              </td>
+              <td>
+                <div class="text-right">
+                  <a class="button radius success tiny" href="#">
+                    <i class="fi-pencil tooltips" data-original-title="Edit User" title="Edit User"></i>
+                  </a>
+                  <a class="button radius secondary tiny" href="#">
+                    <i class="fi-refresh tooltips" data-original-title="Toggle User Status" title="Toggle User Status"></i>
+                  </a>
+                  <a class="button radius alert  tiny" href="#">
+                    <i class="fi-trash  tooltips" data-original-title="Remove User" title="Remove User"></i>
+                  </a>
+                </div>
+              </td>
+            </tr></tbody>
+          </table>
+
+
+        </div>
+        <div class="content" id="panel2">
+
+          <div class="clearfix">
+            <h3 class="left">Last Week <small>Jan, 20 - 27</small></h3>
+            <a class="button small round right dropdown secondary" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" href="#">Filter</a>
+            <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+              <li><a href="#">Last Week</a></li>
+              <li><a href="#">Last 30 days</a></li>
+              <li><a href="#">Last 90 days</a></li>
+            </ul>
+            <hr />
+          </div><!-- / clearfix -->
+
+          <ul class="no-bullet">
+            <li class="clearfix">
+              <strong class="left">Mobile views</strong>
+              <div class="progress small-8 round success right">
+                <span class="meter" style="width: 48%"> 48%</span>
+              </div>
+            </li>
+            <li class="clearfix">
+              <strong class="left">Desktop views</strong>
+              <div class="progress small-8 round success right">
+                <span class="meter" style="width: 22%"> 22%</span>
+              </div>
+            </li>
+            <li class="clearfix">
+              <strong class="left">Direct Traffic</strong>
+              <div class="progress small-8 round right">
+                <span class="meter" style="width: 67%"> 67%</span>
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="row">
+            <div class="medium-6 columns">
+              <h4><i class="fi-graph-bar"></i> Traffic sources</h4>
+              <ul class="info-list">
+                <li><span class="strong">www.npm.org</span> 1022 <small>unique visits</small></li>
+                <li><span class="strong">www.google.com</span> 2412 <small>unique visits</small></li>
+                <li><span class="strong">www.facebook.com</span> 412212 <small>unique visits</small></li>
+              </ul>
+            </div><!--/ medium-6 -->
+            <div class="medium-6 columns">
+              <h4><i class="fi-heart"></i> Popular Hashtags</h4>
+              <ul class="info-list">
+                <li class="clearfix"><span class="strong"> #4NPM</span> <a class="right" href="#"><i class="fi-social-twitter"></i></a></li>
+                <li class="clearfix"><span class="strong">#krisames</span> <a class="right" href="#"><i class="fi-social-twitter"></i></a></li>
+                <li class="clearfix"><span class="strong">#andystanley</span>  <a class="right" href="#"><i class="fi-social-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div><!-- / row -->
+
+        </div><!-- / content -->
+        <div class="content" id="panel3">
+          <h2 class="text-center"><span class="strong">Sorry,<br /></span>Your princess is in another castle.</h2>
+        </div>
+
+      </div><!-- /tabs -->
+
+    </div><!--/ medium-12 -->
+  </div><!--/ row -->
+
+
+  <footer id="mainfoot">
+    <a class="credit" href="http://northpointministries.org">©2015 North Point Ministries Digital team</a>
+  </footer>
+
+  <script src="includes/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="includes/vendor/foundation/js/foundation.min.js"></script>
+
+  <!-- responsive tables -->
+  <script type="text/javascript" src="includes/vendor/responsive-tables/responsive-tables.js"></script>
+
+
+  <!-- Datatables js -->
+  <script type="text/javascript" src="includes/vendor/DataTables/media/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="includes/js/vendor/dataTables.foundation.js"></script>
+
+  <script>
+      $(document).foundation();
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#dataTables-example').DataTable();
+
+      // add table demo
+          var i=1;
+           $("#add_row").click(function(){
+            $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td>");
+
+            $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+            i++;
+        });
+         $("#delete_row").click(function(){
+           if(i>1){
+         $("#addr"+(i-1)).html('');
+         i--;
+         }
+       });
+
+
+    });
+  </script>
+
+  </body>
+</html>
